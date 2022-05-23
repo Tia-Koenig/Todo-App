@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-text: #1c1c1e;
+    --heading-text: #000000;
+    --task-overdue: #ff3b30;
+    --task-urgent: #ff7500;
+    --task-medium: #50c0e8;
+    --task-complete: #14c59d;
+    --background-light: #d1d1d6;
+    --icon-blue: #026ed4;
+    --icon-red: #ff3b40;
+}
