@@ -1,7 +1,8 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 :root {
@@ -15,3 +16,105 @@
     --icon-blue: #026ed4;
     --icon-red: #ff3b40;
 }
+
+body {
+    background-color: var(--background-light);
+    padding: 24px;
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* todo containers */
+.todo-container {
+    min-width: 350px;
+    max-width: 400px;
+    height: 400px;
+    background-color: var(--task-medium);
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+/* header layout */
+.header-container {
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+/* header title */
+.header-container h1 {
+    font-size: 42px;
+}
+
+/* global icon */
+.icon {
+    color: #000000;
+    font-size: 32px;
+    padding-top: 50px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.delete-icon{
+    color: rgb(181, 2, 2);
+}
+
+.edit-icon {
+    color: blue;
+}
+
+/* create new todo */
+.create-todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* create todo label (task title & task description) */
+.create-todo label {
+    padding-right: 5px;
+    font-size: 24px;
+    padding-bottom: 8px;
+}
+
+/* create task layout */
+.create-layout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 24px;
+    padding-bottom: 24px;
+}
+
+/* create new todo input (task title & task description) */
+.create-layout input {
+    font-size: 24px;
+}
+
+#create-task {
+    background-color: #d1d1d6;
+    border-radius: 50px;
+    font-size: 24px;
+    padding: 12px;
+}
+
+.task-icon {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+
+/* .create-description input {
+
+} */
