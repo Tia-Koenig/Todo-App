@@ -32,7 +32,7 @@ body {
 .todo-container {
     min-width: 350px;
     max-width: 400px;
-    height: 400px;
+    height: auto;
     background-color: var(--task-medium);
     margin-top: 24px;
     margin-bottom: 24px;
@@ -118,3 +118,14 @@ body {
 /* .create-description input {
 
 } */
+
+/* view */
+.view-todo {
+    font-size: 24px;
+}
+
+.view-todo button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+}

@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/3c893cafca.js" crossorigin="anonymous"></script>
-    <style ></style>
+    <script
+      src="https://kit.fontawesome.com/3c893cafca.js"
+      crossorigin="anonymous"
+    ></script>
+    <style></style>
     <title>ToDo App</title>
-</head>
-<body>
+  </head>
+  <body>
     <main class="body-container">
-        <section>
-            <div class="header-container">
-                <!-- Header -->
-                <h1>Your ToDo</h1>
-                <!-- Create task - <a href=""><i class="fa-solid fa-plus"></i></a> -->
-                <!-- <div class="create-todo-icon" onclick="create()">
+      <section>
+        <div class="header-container">
+          <!-- Header -->
+          <h1>Your ToDo</h1>
+          <!-- Create task - <a href=""><i class="fa-solid fa-plus"></i></a> -->
+          <!-- <div class="create-todo-icon" onclick="create()">
                     <i class="fa-solid fa-plus icon" id="create-icon"></i>
                 </div> -->
-            </div>
+        </div>
 
-            <!-- creat task  -->
+        <!-- creat task  -->
 
-            <div class="create-todo" id="create-task">
-                <form class="create-form" id="form">
-                    <legend id="task-legend">Enter your task details below</legend>
-                    <div class="create-title create-layout">
-                        <label for="title">Task title:</label>
-                        <input type="text" id="input-title" placeholder="Enter task name">
-                    </div>
-                    <div class="create-description create-layout">
-                        <label for="description">Task description:</label>
-                        <input type="text" id="input-description" placeholder="Enter task description">
-                    </div>
-                    <div class="create-task-btn btn-primary">
-                        <input type="submit" value="Create task" id="create-task" onclick="create()">
-                    </div>
-                </form>
+        <div class="create-task-form">
+          <form class="create-form" id="create-task-form" onsubmit="createTask(event)">
+            <legend id="task-legend">Enter your task details below</legend>
+            <div class="create-title create-layout">
+              <label for="title">Task title:</label>
+              <input type="text" id="input-title" placeholder="Enter task name"/>
             </div>
+            <div class="create-description create-layout">
+              <label for="description">Task description:</label>
+              <input type="text" id="input-description" placeholder="Enter task description"/>
+            </div>
+            <div class="create-task-btn btn-primary">
+              <button type="submit" id="create-task" >Create Task</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- read/view task -->
+        <div class="view-task todo-container" id="all-tasks">
+        </div>
+
+        <!-- update/edit task - <i class="fa-solid fa-pen-to-square"></i> -->
+        <form id="edit-task-form" style="display: none;" onsubmit="editTask(event)">
+          <div id="new-task-title">
+            <label for="new-task-title">Task title:</label>
+            <input type="text" id="update-title" placeholder="Enter new task name"/>
+          </div>
+          <div id="new-task-description">
+            <label for="description">Task description:</label>
+            <input type="text" id="input-description" placeholder="Enter new description"/>
+          </div>
+          <div>
+            <button id="cancel-update" value="cancel">Cancel</button>
+            <button type="submit" id="confirm-update" value="confirm">Confirm Changes</button>
+          </div>
+        </form>
+
+        <!-- <div class="edit-todo todo-container">
                 
-            <!-- read/view task -->
-
-            <div class="view-todo todo-container">
-                <h2 id="render-title">{{Task Heading}}</h2>
-                <p id="render-description">{{Task Description}}</p>
-                <div class="task-icon">
-                    <i class="fa-solid fa-pen-to-square edit-icon icon" id="view-edit" onclick="edit()"></i>
-                    <i class="fa-solid fa-trash-can icon delete-icon" id="view-delete" onclick="remove()"></i>
-                </div>
-            </div>
-
-
-            <!-- update/edit task - <i class="fa-solid fa-pen-to-square"></i> -->
-
-            <!-- <div class="edit-todo todo-container">
-                <i class="fa-solid fa-pen-to-square icon"></i>
             </div> -->
 
+        <!-- remove task - <i class="fa-solid fa-trash-can"></i> -->
+        <div class="delete-task-container">
+            
+        </div>
 
-            <!-- remove task - <i class="fa-solid fa-trash-can"></i> -->
-
-            <!-- <div class="delete-todo">
-                <i class="fa-solid fa-trash-can icon"></i>
-            </div> -->
-
-
-            <!-- exit task - <i class="fa-solid fa-xmark"></i> -->
-
-            <!-- <div class="exit-todo">
-                <i class="fa-solid fa-xmark icon"></i>
-            </div> -->
-        </section>
+      </section>
     </main>
-</body>
+  </body>
 </html>
